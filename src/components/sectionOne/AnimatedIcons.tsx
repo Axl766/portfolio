@@ -5,7 +5,7 @@ import { getPolarCoordinates } from "../../utils/spinningCalculations";
 
 export const AnimatedIcons = () => {
   return (
-    <div className=" flex justify-center w-1/2 p-16  z-50">
+    <div className=" flex justify-center   z-50 p-5">
       <motion.div
         className="rounded-full aspect-square relative "
         animate={{
@@ -46,7 +46,6 @@ export const AnimatedIcons = () => {
               style={coords}
               animate={{
                 rotate: -360,
-                filter: 'drop-shadow(2px 5px 5px #ebebeb)'
               }}
               transition={{
                 repeat: Infinity,
@@ -55,7 +54,7 @@ export const AnimatedIcons = () => {
                 duration: 10,
               }}
             >
-              <Icon className="size-10" />
+              <Icon className="size-8" />
             </motion.div>
           );
         })}
