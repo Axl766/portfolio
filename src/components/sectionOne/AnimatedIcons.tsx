@@ -1,11 +1,11 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "motion/react";
-import { iconItems } from "../icons/icons";
 import { getPolarCoordinates } from "../../utils/spinningCalculations";
+import { itemIcons } from "../../utils/itemIcons";
 
 export const AnimatedIcons = () => {
   return (
-    <div className=" flex justify-center   z-50 p-5">
+    <div className=" flex justify-center   z-50 p-5 sm:p-20">
       <motion.div
         className="rounded-full aspect-square relative "
         animate={{
@@ -36,8 +36,8 @@ export const AnimatedIcons = () => {
             autoplay
           />
         </motion.div>
-        {iconItems.map((Icon, i) => {
-          const coords = getPolarCoordinates(i, iconItems.length, 50);
+        {itemIcons.map((Icon, i) => {
+          const coords = getPolarCoordinates(i, itemIcons.length, 50);
 
           return (
             <motion.div
@@ -54,7 +54,7 @@ export const AnimatedIcons = () => {
                 duration: 10,
               }}
             >
-              <Icon className="size-8" />
+              <Icon className="size-8 text-white " />
             </motion.div>
           );
         })}

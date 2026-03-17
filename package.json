@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.18.4",
+    "@ridemountainpig/svgl-react": "^1.0.15",
     "@tailwindcss/vite": "^4.2.1",
+    "lucide-react": "^0.577.0",
     "motion": "^12.35.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
