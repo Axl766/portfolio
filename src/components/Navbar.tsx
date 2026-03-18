@@ -12,17 +12,19 @@ export const Navbar = () => {
   const [activeTab, setActiveTab] = useState(items[0].id);
 
   return (
-    <motion.nav className="p-1 w-fit bg-textPrimary mx-auto rounded-xl mt-5">
+    <motion.nav className="p-1 w-fit mx-auto rounded-xl mt-5 border border-accent/20  z-100">
       <ul className="flex gap-2">
         {
           items.map((item) => (
             <li 
               key={item.id}
               onClick={() => setActiveTab(item.id)}
-              className="relative px-2 py-1  "
+              className="relative px-2 py-1"
             >
              <a href="#"
-              className="relative z-10 mix-blend-exclusion text-textPrimary "
+               className={`relative z-10 transition-colors duration-200 ${
+                 activeTab === item.id ? "text-textPrimary" : "text-textSecondary"
+               }`}
              >
               {item.text}
              </a>
@@ -30,7 +32,7 @@ export const Navbar = () => {
               activeTab === item.id && (
                 <motion.div
                   layoutId="active-tab"
-                  className="bg-background absolute inset-0 rounded-lg"
+                  className="bg-accent/30 absolute inset-0 rounded-lg"
                   transition={{type: 'spring', stiffness: 40}}
                 />
 

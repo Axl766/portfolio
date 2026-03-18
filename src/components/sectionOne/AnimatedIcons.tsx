@@ -19,7 +19,7 @@ export const AnimatedIcons = () => {
         }}
       >
         <motion.div
-          className="w-full h-full"
+          className="w-full h-full  sm:p-0"
           animate={{
             rotate: -360,
           }}
@@ -31,7 +31,7 @@ export const AnimatedIcons = () => {
           }}
         >
           <DotLottieReact
-            src="https://lottie.host/2ae53fbc-b58e-4dc0-8037-341a6bea6485/onw8pprzjw.lottie"
+            src="/avatar.lottie"
             loop
             autoplay
           />
@@ -54,7 +54,7 @@ export const AnimatedIcons = () => {
                 duration: 10,
               }}
             >
-              <Icon className="size-8 text-white " />
+              <Icon className="size-6 sm:size-8 text-textPrimary" />
             </motion.div>
           );
         })}
