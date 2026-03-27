@@ -21,7 +21,7 @@ export const Navbar = () => {
               onClick={() => setActiveTab(item.id)}
               className="relative px-2 py-1"
             >
-             <a href="#"
+             <a href={`#${item.text}`}
                className={`relative z-10 transition-colors duration-200 ${
                  activeTab === item.id ? "text-textPrimary" : "text-textSecondary"
                }`}

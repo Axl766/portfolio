@@ -13,4 +13,9 @@
 
 body {
   @apply bg-background;
+  
+}
+
+html {
+  scroll-behavior: smooth;
 }
