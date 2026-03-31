@@ -5,9 +5,9 @@ import { itemIcons } from "../../utils/itemIcons";
 
 export const AnimatedIcons = () => {
   return (
-    <div className=" flex justify-center   z-50 p-5 sm:p-20">
+    <div className=" flex justify-center overflow-hidden p-4 ">
       <motion.div
-        className="rounded-full aspect-square relative "
+        className="rounded-full aspect-square relative p-5"
         animate={{
           rotate: 360,
         }}
@@ -19,7 +19,7 @@ export const AnimatedIcons = () => {
         }}
       >
         <motion.div
-          className="w-full h-full  sm:p-0"
+          className="h-full max-w-60 md:max-w-72 w-full lg:max-w-none lg:p-8 p-3 drop-shadow-[0px_0px_7px] drop-shadow-accent"
           animate={{
             rotate: -360,
           }}
@@ -34,6 +34,7 @@ export const AnimatedIcons = () => {
             src="/avatar.lottie"
             loop
             autoplay
+            className=""
           />
         </motion.div>
         {itemIcons.map((Icon, i) => {
@@ -54,7 +55,7 @@ export const AnimatedIcons = () => {
                 duration: 10,
               }}
             >
-              <Icon className="size-6 sm:size-8 text-textPrimary" />
+              <Icon className="size-6  text-textPrimary" />
             </motion.div>
           );
         })}

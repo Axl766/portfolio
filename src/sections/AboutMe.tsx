@@ -2,7 +2,7 @@ import { Brain } from "lucide-react";
 
 export const AboutMe = () => {
   return (
-    <section id="Sobre mi" className="min-h-screen px-4 py-12 space-y-6 text-textPrimary">
+    <section id="Sobre mi" className="h-screen px-4  text-textPrimary">
       <h2 className="text-center text-[clamp(2rem,6vw,3.5rem)] font-myFont font-bold ">
         Sobre Mí
       </h2>

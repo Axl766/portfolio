@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 
 const items = [
@@ -10,9 +10,28 @@ const items = [
 
 export const Navbar = () => {
   const [activeTab, setActiveTab] = useState(items[0].id);
+  const [hidden, setHidden] = useState(false)
+  const {scrollY} = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const previous = scrollY.getPrevious();
+    
+    if (latest >  previous! && latest > 50) {
+      setHidden(true)
+    } else {
+      setHidden(false)
+    }
+  })
 
   return (
-    <motion.nav className="p-1 w-fit mx-auto rounded-xl mt-5 border border-accent/20  z-100">
+    <motion.nav className={`p-1 w-fit mx-auto rounded-xl  border border-accent/20 sticky top-2 z-200 `}
+      transition={{duration: 0.7, ease: 'easeInOut'}}
+      variants={{
+        visible: {y:0},
+        hidden: {y: '-200%'}
+      }}
+      animate={hidden ? 'hidden' : 'visible'}
+    >
       <ul className="flex gap-2">
         {
           items.map((item) => (
@@ -21,13 +40,13 @@ export const Navbar = () => {
               onClick={() => setActiveTab(item.id)}
               className="relative px-2 py-1"
             >
-             <a href={`#${item.text}`}
-               className={`relative z-10 transition-colors duration-200 ${
-                 activeTab === item.id ? "text-textPrimary" : "text-textSecondary"
-               }`}
-             >
-              {item.text}
-             </a>
+              <a href={`#${item.text}`}
+                className={`relative z-10 transition-colors duration-200 text-[clamp(0.875rem,1.5vw,1rem)] ${
+                  activeTab === item.id ? "text-textPrimary" : "text-textSecondary"
+                }`}
+              >
+               {item.text}
+              </a>
              {
               activeTab === item.id && (
                 <motion.div

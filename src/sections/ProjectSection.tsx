@@ -9,7 +9,7 @@ export const ProjectSection = () => {
   const [cardData, setCardData] = useState(projectItems);
   
   return (
-    <section className="h-screen py-12 space-y-6" id="Proyectos">
+    <section className="h-screen space-y-6  text-textPrimary" id="Proyectos">
       <h2 className="text-center text-[clamp(2rem,6vw,3.5rem)] font-myFont font-bold text-textPrimary"> Proyectos </h2>
       <div className="grid place-items-center gap-6 max-w-56 sm:max-w-96 mx-auto md:hidden">
         {cardData.map((item) => (

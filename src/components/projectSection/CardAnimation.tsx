@@ -47,7 +47,7 @@ export const CardAnimation = ({
 
   return (
     <motion.article
-      className="row-start-1 col-start-1 w-full h-72 bg-cover bg-center bg-no-repeat rounded-xl pointer-events-auto origin-bottom relative"
+      className="row-start-1 col-start-1 w-full h-72 bg-cover bg-center bg-no-repeat rounded-xl pointer-events-auto origin-bottom relative cursor-grab active:cursor-grabbing"
       style={{
         x,
         rotate,
