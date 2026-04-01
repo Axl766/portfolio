@@ -5,7 +5,7 @@ import { SectionOne } from "./sections/SectionOne";
 
 const App = () => {
   return (
-    <main className="max-w-6xl mx-auto flex flex-col p-2 ">
+    <main className="max-w-6xl mx-auto flex flex-col p-2 md:px-10 xl:px-0">
       <Navbar />
       <SectionOne />
       <ProjectSection />

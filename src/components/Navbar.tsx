@@ -24,11 +24,11 @@ export const Navbar = () => {
   })
 
   return (
-    <motion.nav className={`p-1 w-fit mx-auto rounded-xl  border border-accent/20 sticky top-2 z-200 `}
-      transition={{duration: 0.7, ease: 'easeInOut'}}
+    <motion.nav className={`p-1 w-fit mx-auto rounded-xl  border border-accent/20 sticky top-2 z-20 `}
+      transition={{duration: 0.5, ease: 'easeInOut'}}
       variants={{
-        visible: {y:0},
-        hidden: {y: '-200%'}
+        visible: {y:0, scale: 1},
+        hidden: {y: '-200%', scale: 0.5}
       }}
       animate={hidden ? 'hidden' : 'visible'}
     >

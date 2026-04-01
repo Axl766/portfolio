@@ -8,7 +8,7 @@ import { FileUser, Github, Linkedin } from "lucide-react";
 export const SectionOne = () => {
   return (
     <section
-      className="flex flex-col  flex-1 min-h-screen pb-10 lg:flex-row lg:items-center"
+      className="flex flex-col  flex-1 min-h-screen pb-10 lg:flex-row lg:items-center scroll-mt-16"
       id="Inicio"
     >
       <div className=" border-white flex flex-col flex-1 justify-evenly lg:w-1/2 lg:justify-center  lg:gap-10">

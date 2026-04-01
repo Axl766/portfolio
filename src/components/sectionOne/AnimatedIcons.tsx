@@ -19,7 +19,7 @@ export const AnimatedIcons = () => {
         }}
       >
         <motion.div
-          className="h-full max-w-60 md:max-w-72 w-full lg:max-w-none lg:p-8 p-3 drop-shadow-[0px_0px_7px] drop-shadow-accent"
+          className="h-full max-w-60 md:max-w-72 w-full lg:max-w-96 lg:p-8 p-3 drop-shadow-[0px_0px_7px] drop-shadow-accent"
           animate={{
             rotate: -360,
           }}

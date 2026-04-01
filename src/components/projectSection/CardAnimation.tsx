@@ -58,6 +58,7 @@ export const CardAnimation = ({
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.3}
       onDragEnd={handleDragEnd}
+   
     />
   );
 };
